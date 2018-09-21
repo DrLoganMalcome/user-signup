@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
   <title></title>
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
+
 
   <script type="text/javascript">
   </script>
@@ -15,9 +15,17 @@
 </head>
 
 <body>
+
+        {% block content %}
+        {% endblock %}
+    <form>
+        Username<input type="text" name="user">
+        Email<input type="text" name="email">
+        Password<input type="password" name="password">
+        Confirm Password<input type="password" name="passwordConfirm">
+    </form>
+
 </body>
 
-{% block content %}
-{% endblock %}
 
 </html>
