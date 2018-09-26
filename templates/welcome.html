@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form>
-        Username<input type="text" name="user">
-        Email<input type="text" name="email">
-        Password<input type="password" name="password">
-        Confirm Password<input type="password" name="passwordConfirm">
+<form action="/register" method="post">
+        Username<input type="text" name="user"><br>
+        Email<input type="text" name="email"><br>
+        Password<input type="password" name="password"><br>
+        Confirm Password<input type="password" name="passwordConfirm"><br>
+        <input type="submit" name="register">
+        {% if error %}
+        <p class='error'>{{ error }}</p>
+        {% endif %}
 </form>
 {% endblock %}
